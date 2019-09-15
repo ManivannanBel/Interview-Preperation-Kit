@@ -12,7 +12,7 @@ public class Kruskals {
 	
 	class Node{	//This node represents an edge between two vertex i.e, source and destination.
 		int source;
-		int destination;
+		int destination; 
 		int cost;
 		public Node(int source, int destination, int cost) {
 			this.source = source;
