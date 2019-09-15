@@ -37,7 +37,10 @@ class Edge{
 public class Graph {
 	private boolean directed;
 	private boolean weighted;
-	private int NoOfVertices;
+	
+	List<Vertex> allVertex;
+	Map<Integer, Vertex> vertexMap;
+	
 	private int NoOfEdges;
 	
 	public boolean isDirected() {
@@ -57,11 +60,7 @@ public class Graph {
 	}
 
 	public int getNoOfVertices() {
-		return NoOfVertices;
-	}
-
-	public void setNoOfVertices(int noOfVertices) {
-		NoOfVertices = noOfVertices;
+		return allVertex.size();
 	}
 
 	public int getNoOfEdges() {
@@ -72,13 +71,12 @@ public class Graph {
 		NoOfEdges = noOfEdges;
 	}
 
-	List<Vertex> allVertex;
-	Map<Integer, Vertex> vertexMap;
+	
 	
 	Graph(boolean directed, boolean weighted){
 		this.directed = directed;
 		this.weighted = weighted;
-		this.NoOfVertices = 0;
+		//this.NoOfVertices = 0;
 		this.NoOfEdges = 0;
 		allVertex = new ArrayList<>();
 		vertexMap = new HashMap<>();
@@ -89,7 +87,7 @@ public class Graph {
 			Vertex v = new Vertex(value);
 			allVertex.add(v);
 			vertexMap.put(value, v);
-			this.NoOfVertices++;
+			//this.NoOfVertices++;
 		}
 	}
 	

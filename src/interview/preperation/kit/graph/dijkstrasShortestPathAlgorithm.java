@@ -98,6 +98,7 @@ public class dijkstrasShortestPathAlgorithm {
 		g.addEdge(7, 6, 1);
 		g.addEdge(6, 8, 6);
 		
+		//Print the graph
 		for(Vertex v : g.allVertex) {
 			v.print();
 		}
