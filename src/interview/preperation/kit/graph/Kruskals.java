@@ -10,7 +10,7 @@ public class Kruskals {
 	DisjointSet disjointSet = new DisjointSet();	//Create disjoint set
 	List<Node> edges = new LinkedList<Node>();	//store all the edges in the graph
 	
-	class Node{	//This node represents an edge between two vertex i.e, source and destination
+	class Node{	//This node represents an edge between two vertex i.e, source and destination.
 		int source;
 		int destination;
 		int cost;
