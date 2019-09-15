@@ -31,7 +31,7 @@ public class DisjointSet {
 		if(parent == n) {
 			return parent;
 		}
-		n.parent = findSet(parent.parent);
+		n.parent = findSet(n.parent);
 		return n.parent;
 	}
 	
@@ -58,6 +58,13 @@ public class DisjointSet {
 		
 	}
 	
+	public void print() {
+		System.out.println();
+		for(Entry entry : map.entrySet()) {
+			System.out.println("node " +entry.getKey() + " parent: " + (findSet((int)entry.getKey()).data));
+		}
+	}
+	
 	public static void main(String[] arg) {
 	
 		DisjointSet disjointSet = new DisjointSet();
@@ -74,17 +81,11 @@ public class DisjointSet {
 			System.out.println("node " +entry.getKey() + " parent: " + (disjointSet.findSet((int)entry.getKey()).data));
 		}
 		
-		disjointSet.union(0, 5);
-		disjointSet.union(1, 6);
-		disjointSet.union(0, 6);
-		disjointSet.union(2, 3);
-		disjointSet.union(3, 4);
+		disjointSet.union(0, 3);
 		disjointSet.union(1, 2);
+		disjointSet.union(3, 2);
 		
-		System.out.println();
-		for(Entry entry : disjointSet.map.entrySet()) {
-			System.out.println("node " +entry.getKey() + " parent: " + (disjointSet.findSet((int)entry.getKey()).data));
-		}
+		
 		
 	}
 	
