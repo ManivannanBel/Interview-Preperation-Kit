@@ -1,8 +1,3 @@
-/*
- * Articulation point finding algorithm using Tarjan's Algorithm:
- * Time Complexity: O(V+E) since it is depth first search
- * Space Complexity: O(V)
- */
 package interview.preperation.kit.graph;
 
 import java.util.ArrayList;
@@ -10,6 +5,16 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+
+/**
+ * 
+ * @author Manivannan
+ *
+ * Articulation point finding algorithm using Tarjan's Algorithm:
+ * Time Complexity: O(V+E) since it is depth first search
+ * Space Complexity: O(V)
+ * 
+ */
 
 public class ArticulationPoint {
 
