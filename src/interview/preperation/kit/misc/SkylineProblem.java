@@ -1,4 +1,4 @@
-package interview.preperation.misc;
+package interview.preperation.kit.misc;
 
 import java.util.ArrayList;
 import java.util.Arrays;
