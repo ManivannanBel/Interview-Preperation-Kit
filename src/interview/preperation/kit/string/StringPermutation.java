@@ -24,8 +24,8 @@ public class StringPermutation {
 			});
 		}
 		
-		char[] st = new char[str.length()];
-		int[] count = new int[str.length()];
+		char[] st = new char[countMap.size()];
+		int[] count = new int[countMap.size()];
 		int index = 0;
 		for(Map.Entry entry : countMap.entrySet()) {
 			st[index] = (char)entry.getKey();
