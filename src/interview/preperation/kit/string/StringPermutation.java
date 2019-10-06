@@ -40,7 +40,7 @@ public class StringPermutation {
 	
 	public void permutateUtil(char[] str, char result[], int[] count, int index, List<String> resultList) {
 		
-		if(index == str.length) {
+		if(index == result.length) {
 			resultList.add(String.valueOf(result));
 		}else {
 			for (int i = 0; i < str.length; i++) {
