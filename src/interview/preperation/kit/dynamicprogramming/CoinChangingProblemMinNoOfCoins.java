@@ -21,8 +21,8 @@ public class CoinChangingProblemMinNoOfCoins {
 	
 	public static int findMininumNumberOfCoins(int arr[], int total) {
 		
-		int T[] = new int[total + 1];
-		int R[] = new int[total + 1];
+		int T[] = new int[total + 1]; // To store no of coins
+		int R[] = new int[total + 1]; // To track the coin combination
 		
 		Arrays.fill(T, Integer.MAX_VALUE - 1);
 		T[0] = 0;
