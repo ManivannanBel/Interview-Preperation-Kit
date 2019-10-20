@@ -17,6 +17,7 @@ public class CoinChangingProblemMinNoOfCoins {
 		
 		//System.out.println(findMininumNumberOfCoins(new int[] {25, 10, 5}, 30));
 		System.out.println(findMininumNumberOfCoins(new int[] {1, 5, 6, 8}, 11));
+		System.out.println(findMininumNumberOfCoins(new int[] {9, 6, 5, 1}, 11));
 	}
 	
 	public static int findMininumNumberOfCoins(int arr[], int total) {
