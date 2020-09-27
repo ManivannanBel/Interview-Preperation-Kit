@@ -25,27 +25,27 @@ public class LongestCommonPrefix {
 	
 	//O(N * M) N -> length of string array, M length if the shortest string present in the array
 	public static String longestCommonPrefix(String[] strs) {
-	       if(strs == null || strs.length == 0) return "" ;
-	       if(strs.length == 1) return strs[0];
-	       StringBuffer sb = new StringBuffer();
-	       int minLen = Integer.MAX_VALUE;
-	       for(int i = 0; i < strs.length; i++){
-	           if(strs[i].length() < minLen){
-	               minLen = strs[i].length();
-	           }
-	       } 
-	       char ch;
-	       for(int i = 0; i < minLen; i++){
-	           ch = ' ';
-	           for(int j = 0; j < strs.length; j++){
-	              if(ch == ' '){
-	                  ch = strs[j].charAt(i);
-	              }else if(ch != strs[j].charAt(i)){
-	                  return sb.toString();
-	              }
-	           }         
-	           sb.append(ch);
-	       } 
-	       return sb.toString();
-	    }
+       if(strs == null || strs.length == 0) return "" ;
+       if(strs.length == 1) return strs[0];
+       StringBuffer sb = new StringBuffer();
+       int minLen = Integer.MAX_VALUE;
+       for(int i = 0; i < strs.length; i++){
+           if(strs[i].length() < minLen){
+               minLen = strs[i].length();
+           }
+       } 
+       char ch;
+       for(int i = 0; i < minLen; i++){
+           ch = ' ';
+           for(int j = 0; j < strs.length; j++){
+              if(ch == ' '){
+                  ch = strs[j].charAt(i);
+              }else if(ch != strs[j].charAt(i)){
+                  return sb.toString();
+              }
+           }         
+           sb.append(ch);
+       } 
+       return sb.toString();
+    }
 }
