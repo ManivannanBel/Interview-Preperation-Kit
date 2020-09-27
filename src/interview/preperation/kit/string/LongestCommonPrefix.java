@@ -63,6 +63,7 @@ public class LongestCommonPrefix {
 		
 		//O(N * M)
 		for(String str : strs) {
+			if(str.length() == 0) return str;	//["","a"]
 			trie.insert(str);
 		}
 		
@@ -71,7 +72,7 @@ public class LongestCommonPrefix {
 		TrieNode currentNode = trie.getRoot();
 		HashMap<Character, TrieNode> children = currentNode.getChildren();
 		//O(M)
-		while(children.size() > 0) {
+		while(children.size() > 0 && !currentNode.isWord()) {
 			
 			if(children.size() == 1) {
 				for(Entry<Character, TrieNode> entry : children.entrySet()) {
