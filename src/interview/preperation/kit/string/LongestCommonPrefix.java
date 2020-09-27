@@ -23,6 +23,7 @@ public class LongestCommonPrefix {
 		System.out.println(res1);
 	}
 	
+	//O(N * M) N -> length of string array, M length if the shortest string present in the array
 	public static String longestCommonPrefix(String[] strs) {
 	       if(strs == null || strs.length == 0) return "" ;
 	       if(strs.length == 1) return strs[0];
