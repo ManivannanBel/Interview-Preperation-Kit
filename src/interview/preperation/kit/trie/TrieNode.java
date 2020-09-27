@@ -26,5 +26,4 @@ public class TrieNode {
 	public void setWord(boolean isWord) {
 		this.isWord = isWord;
 	}
-	
 }
