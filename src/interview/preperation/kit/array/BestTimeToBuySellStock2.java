@@ -40,6 +40,7 @@ public class BestTimeToBuySellStock2 {
 		System.out.println(maxProfit(arr2));
 	}
 	
+	// run time O(n), space complexity (1)
 	public static int maxProfit(int[] prices) {
         if(prices == null || prices.length <= 1) return 0;
         int leftMin = prices[0];
