@@ -32,6 +32,26 @@ public class BestTimeToBuySellStock1 {
 		System.out.println(maxProfit(arr3));
 	}
 	
+	//time complexity O(n), space complexity )(1)
+	public static int maxProfitEff(int[] prices) {
+        if(prices == null || prices.length <= 1) return 0;
+        int leftMin = Integer.MAX_VALUE;
+        int max = 0;
+        int len = prices.length;
+        for(int i = 0; i < len; i++){
+            if(prices[i] < leftMin){
+                leftMin = prices[i];
+            }else{
+                int curMax = prices[i] - leftMin;
+                if(curMax > max){
+                    max = curMax;
+                }
+            }        
+        }
+        return max;
+    }
+	
+	//time complexity O(n), space complexity )(n)
 	public static int maxProfit(int[] prices) {
         if(prices == null || prices.length <= 1) return 0;
         int max = 0;
