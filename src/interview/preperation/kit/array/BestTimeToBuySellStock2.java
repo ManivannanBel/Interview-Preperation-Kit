@@ -52,7 +52,7 @@ public class BestTimeToBuySellStock2 {
                 int curMax = prices[i - 1] - leftMin;
                 totalProfit += curMax;
                 leftMin = prices[i];
-            } 
+            }
             if(prices[i] < leftMin){
                 leftMin = prices[i];
             }
