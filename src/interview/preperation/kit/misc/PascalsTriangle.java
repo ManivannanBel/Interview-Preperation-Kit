@@ -5,17 +5,8 @@ import java.util.ArrayList;;
 
 public class PascalsTriangle {
 	public static void main(String args[]) {
-		List<List<Integer>> trinagle = pascalsTriangleDP(5);
-		
-		System.out.println("[");
-		for(int i = 0; i < trinagle.size(); i++) {
-			System.out.print("[");
-			for(int j = 0; j < trinagle.get(i).size(); j++) {
-				System.out.print(trinagle.get(i).get(j)+" ");
-			}
-			System.out.println("]");
-		}
-		System.out.println("]");
+		List<List<Integer>> triangle = pascalsTriangleDP(5);
+		print(triangle);
 	}
 	
 	public static List<List<Integer>> pascalsTriangleDP(int numRows){
@@ -37,5 +28,17 @@ public class PascalsTriangle {
 	            Result.add(curRow);
 	        }
 	        return Result;
+	}
+	
+	public static void print(List<List<Integer>> triangle) {
+		System.out.println("[");
+		for(int i = 0; i < triangle.size(); i++) {
+			System.out.print("[");
+			for(int j = 0; j < triangle.get(i).size(); j++) {
+				System.out.print(triangle.get(i).get(j)+" ");
+			}
+			System.out.println("]");
+		}
+		System.out.println("]");
 	}
 }
