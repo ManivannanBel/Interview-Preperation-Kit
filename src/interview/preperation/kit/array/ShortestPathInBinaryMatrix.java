@@ -29,6 +29,10 @@ import java.util.Queue;
 
 class QueueItem{
     public int row, col, dist;
+    public QueueItem(int row, int col){
+        this.row = row;
+        this.col = col;
+    }
     public QueueItem(int row, int col, int dist){
         this.row = row;
         this.col = col;
